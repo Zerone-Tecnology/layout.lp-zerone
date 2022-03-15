@@ -33,7 +33,7 @@ function prevStepItem() {
     $(".step--item").filter(".step--item-active").removeClass("step--item-active");
     $($('.step--item')[prevIndex]).addClass("step--item-active");
 
-    $('.step--list').animate({ scrollLeft: prevIndex * 380 + 35 }, 600);
+    $('.step--list').animate({ scrollLeft: prevIndex * 380 }, 600);
 }
 function nextStepItem() {
     let nextIndex = $(".step--item").filter(".step--item-active").next().index();
