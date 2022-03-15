@@ -26,6 +26,24 @@ DG.then(function () {
 });
 // Map end
 
+function prevStepItem() {
+    let prevIndex = $(".step--item").filter(".step--item-active").prev().index();
+    if (prevIndex == -1) { return 0 }
+
+    $(".step--item").filter(".step--item-active").removeClass("step--item-active");
+    $($('.step--item')[prevIndex]).addClass("step--item-active");
+
+    $('.step--list').animate({ scrollLeft: prevIndex * 380 + 35 }, 600);
+}
+function nextStepItem() {
+    let nextIndex = $(".step--item").filter(".step--item-active").next().index();
+    if (nextIndex == 12) { return 0 }
+
+    $(".step--item").filter(".step--item-active").removeClass("step--item-active");
+    $($('.step--item')[nextIndex]).addClass("step--item-active");
+
+    $('.step--list').animate({ scrollLeft: nextIndex * 380 + 35 * nextIndex }, 600);
+}
 
 
 $(document).on('load', () => {

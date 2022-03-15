@@ -14,6 +14,7 @@ body {
   margin: 0;
   padding: 0;
   background: #fbfbfb;
+  color: #2b2732;
   font-family: 'Inter', sans-serif;
 }
 
@@ -137,6 +138,8 @@ section.hot marquee {
 }
 
 section.hot marquee h1 {
+  font-size: 120px;
+  margin: 32px 0;
   font-family: 'Source Sans Pro', sans-serif !important;
   text-transform: uppercase;
 }
@@ -189,6 +192,39 @@ section.portfolio .slider--number-total {
   font-size: 24px !important;
 }
 
+section.portfolio .slider--prev, section.portfolio .slider--next {
+  position: relative;
+  height: 54px;
+  width: 108px;
+}
+
+section.portfolio .slider--prev img, section.portfolio .slider--next img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto auto;
+  -webkit-transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+section.portfolio .slider--prev:hover {
+  background: none !important;
+}
+
+section.portfolio .slider--prev:hover img {
+  left: -25px;
+}
+
+section.portfolio .slider--next:hover {
+  background: none !important;
+}
+
+section.portfolio .slider--next:hover img {
+  right: -25px;
+}
+
 footer {
   position: relative;
   padding: 92px 0;
@@ -234,6 +270,8 @@ footer .btt {
 footer #map {
   width: 100%;
   height: 100%;
+  -webkit-filter: grayscale(60%);
+          filter: grayscale(60%);
 }
 
 .text-primary {
@@ -309,6 +347,11 @@ footer #map {
   border: none;
 }
 
+.btn:hover {
+  background: #2b2732;
+  color: #ffffff;
+}
+
 .tarif--list {
   margin-top: 48px;
 }
@@ -359,4 +402,168 @@ footer #map {
     -webkit-transform: rotate(-360deg);
             transform: rotate(-360deg);
   }
+}
+
+.step--btn-left, .step--btn-right {
+  border: 1px solid #ffffff;
+  position: relative;
+  height: 54px;
+  width: 108px;
+}
+
+.step--btn-left img, .step--btn-right img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  margin: auto auto;
+  -webkit-transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.step--btn-left:hover, .step--btn-right:hover {
+  background-color: none !important;
+  background: none !important;
+}
+
+.step--btn-left:hover img {
+  left: -25px;
+}
+
+.step--btn-right:hover img {
+  right: -25px;
+}
+
+.step--list {
+  width: 100%;
+  height: 360px;
+  max-width: 100%;
+  overflow: hidden;
+  overflow-x: scroll;
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+
+.step--list::-webkit-scrollbar {
+  display: none;
+}
+
+.step--item {
+  position: absolute;
+  left: 120px;
+  top: 0;
+  width: 380px;
+  padding: 16px 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  color: #ffffff;
+  border-radius: 8px;
+  border: 1px solid #ffffff;
+  -webkit-transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+  transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.step--item h5 {
+  margin: 0 0 11px 0;
+}
+
+.step--item p {
+  margin: 0 0 16px 0;
+}
+
+.step--item-active, .step--item:hover {
+  cursor: pointer;
+  background-color: #ffffff;
+}
+
+.step--item-active h4, .step--item:hover h4 {
+  color: #2b2732;
+}
+
+.step--item-active p, .step--item:hover p {
+  color: #2b2732;
+}
+
+.step--item-1 {
+  left: 150px;
+  top: 0;
+}
+
+.step--item-2 {
+  left: calc(150px + 380px + 35px);
+  top: 54px;
+}
+
+.step--item-3 {
+  left: calc(565px + 380px + 35px);
+  top: 108px;
+}
+
+.step--item-4 {
+  left: calc(980px + 380px + 35px);
+  top: 0;
+}
+
+.step--item-5 {
+  left: calc(1395px + 380px + 35px);
+  top: 54px;
+}
+
+.step--item-6 {
+  left: calc(1810px + 380px + 35px);
+  top: 108px;
+}
+
+.step--item-7 {
+  left: calc(2225px + 380px + 35px);
+  top: 0px;
+}
+
+.step--item-8 {
+  left: calc(2640px + 380px + 35px);
+  top: 54px;
+}
+
+.step--item-9 {
+  left: calc(3055px + 380px + 35px);
+  top: 108px;
+}
+
+.step--item-10 {
+  left: calc(3470px + 380px + 35px);
+  top: 0px;
+}
+
+.step--item-11 {
+  left: calc(3885px + 380px + 35px);
+  top: 54px;
+}
+
+.step--item-12 {
+  left: calc(4300px + 380px + 35px);
+  top: 108px;
+  margin-right: 150px !important;
+}
+
+.step--item-clear {
+  left: calc(4715px + 150px);
+  border: none;
+}
+
+.step--item-liner {
+  background: none !important;
+  border: none;
+  width: 4715px;
+  max-width: 4715px;
+  top: 260px;
 }
