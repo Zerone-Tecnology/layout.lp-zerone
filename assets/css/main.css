@@ -32,6 +32,120 @@ a {
   color: inherit;
 }
 
+.text-primary {
+  color: #056d7b;
+}
+
+.text-white {
+  color: #ffffff;
+}
+
+.text-white::after {
+  content: '';
+  background-color: #ffffff !important;
+}
+
+.h-underline::after {
+  content: '';
+  width: 80px;
+  height: 4px;
+  background-color: #056d7b;
+  position: absolute;
+  bottom: -16px;
+  left: 0;
+}
+
+.ml-auto {
+  margin-left: auto;
+}
+
+.btn {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 18px 30px;
+  border: 2px solid #2b2732;
+  border-radius: 72px;
+}
+
+.btn--wrapper {
+  width: 100%;
+  margin-top: 32px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: 32px;
+}
+
+.btn--primary {
+  color: #ffffff;
+  background: #11a083;
+}
+
+.btn--clear {
+  border: none;
+}
+
+.btn:hover {
+  background: #2b2732;
+  color: #ffffff;
+}
+
+.animated--circle {
+  position: absolute;
+  right: 80px;
+  bottom: 80px;
+  -webkit-transform-origin: center center;
+          transform-origin: center center;
+  -webkit-animation: circle 8s linear infinite;
+          animation: circle 8s linear infinite;
+}
+
+@-webkit-keyframes circle {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+@keyframes circle {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(-360deg);
+            transform: rotate(-360deg);
+  }
+}
+
+.x-hidden {
+  overflow-x: hidden;
+}
+
 header {
   margin: 0;
   padding: 24px 0;
@@ -62,6 +176,56 @@ nav .menu--horizontal {
       -ms-flex-align: center;
           align-items: center;
   gap: 42px;
+}
+
+footer {
+  position: relative;
+  padding: 92px 0;
+  overflow-x: hidden;
+}
+
+footer h1 {
+  font-family: 'GetVoIP Grotesque', sans-serif;
+}
+
+footer .mr-4 {
+  margin-right: 16px;
+}
+
+footer .mt-max {
+  margin-top: 64px;
+}
+
+footer .contacts {
+  gap: 0;
+}
+
+footer .contacts--name {
+  margin: 0;
+  color: #7e7b82;
+  font-family: 'GetVoIP Grotesque', sans-serif;
+}
+
+footer .contacts--map {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 40%;
+  background: #7e7b82;
+}
+
+footer .btt {
+  position: absolute;
+  top: 100px;
+  left: 80px;
+}
+
+footer #map {
+  width: 100%;
+  height: 100%;
+  -webkit-filter: grayscale(60%);
+          filter: grayscale(60%);
 }
 
 section {
@@ -225,134 +389,6 @@ section.portfolio .slider--next:hover img {
   right: -25px;
 }
 
-footer {
-  position: relative;
-  padding: 92px 0;
-  overflow-x: hidden;
-}
-
-footer h1 {
-  font-family: 'GetVoIP Grotesque', sans-serif;
-}
-
-footer .mr-4 {
-  margin-right: 16px;
-}
-
-footer .mt-max {
-  margin-top: 64px;
-}
-
-footer .contacts {
-  gap: 0;
-}
-
-footer .contacts--name {
-  margin: 0;
-  color: #7e7b82;
-  font-family: 'GetVoIP Grotesque', sans-serif;
-}
-
-footer .contacts--map {
-  position: absolute;
-  right: 0;
-  bottom: 0;
-  height: 100%;
-  width: 40%;
-  background: #7e7b82;
-}
-
-footer .btt {
-  position: absolute;
-  top: 100px;
-  left: 80px;
-}
-
-footer #map {
-  width: 100%;
-  height: 100%;
-  -webkit-filter: grayscale(60%);
-          filter: grayscale(60%);
-}
-
-.text-primary {
-  color: #056d7b;
-}
-
-.text-white {
-  color: #ffffff;
-}
-
-.text-white::after {
-  content: '';
-  background-color: #ffffff !important;
-}
-
-.h-underline::after {
-  content: '';
-  width: 80px;
-  height: 4px;
-  background-color: #056d7b;
-  position: absolute;
-  bottom: -16px;
-  left: 0;
-}
-
-.ml-auto {
-  margin-left: auto;
-}
-
-.btn {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
-  width: fit-content;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 18px 30px;
-  border: 2px solid #2b2732;
-  border-radius: 72px;
-}
-
-.btn--wrapper {
-  width: 100%;
-  margin-top: 32px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  gap: 32px;
-}
-
-.btn--primary {
-  color: #ffffff;
-  background: #11a083;
-}
-
-.btn--clear {
-  border: none;
-}
-
-.btn:hover {
-  background: #2b2732;
-  color: #ffffff;
-}
-
 .tarif--list {
   margin-top: 48px;
 }
@@ -401,38 +437,6 @@ footer #map {
 
 .tarif--content .price--old {
   text-decoration: line-through;
-}
-
-.animated--circle {
-  position: absolute;
-  right: 80px;
-  bottom: 80px;
-  -webkit-transform-origin: center center;
-          transform-origin: center center;
-  -webkit-animation: circle 8s linear infinite;
-          animation: circle 8s linear infinite;
-}
-
-@-webkit-keyframes circle {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
-  }
-}
-
-@keyframes circle {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(-360deg);
-            transform: rotate(-360deg);
-  }
 }
 
 .step--btn-left, .step--btn-right {
@@ -603,8 +607,4 @@ footer #map {
   top: 260px;
   -webkit-backdrop-filter: none;
           backdrop-filter: none;
-}
-
-.x-hidden {
-  overflow-x: hidden;
 }

@@ -1,0 +1,46 @@
+footer {
+	position: relative;
+	padding: 92px 0;
+	overflow-x: hidden;
+
+	h1 {
+		font-family: 'GetVoIP Grotesque', sans-serif;
+	}
+
+	.mr-4 {
+		margin-right: 16px;
+	}
+	.mt-max {
+		margin-top: 64px;
+	}
+
+	.contacts {
+		gap: 0;
+
+		&--name {
+			margin: 0;
+			color: #7e7b82;
+			font-family: 'GetVoIP Grotesque', sans-serif;
+		}
+		&--map {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+			height: 100%;
+			width: 40%;
+			background: #7e7b82;
+		}
+	}
+
+	.btt {
+		position: absolute;
+		top: 100px;
+		left: 80px;
+	}
+
+	#map {
+		width: 100%;
+		height: 100%;
+		filter: grayscale(60%);
+	}
+}

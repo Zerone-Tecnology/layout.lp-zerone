@@ -1,68 +1,3 @@
-// font-family: 'GetVoIP Grotesque', sans-serif;
-@font-face {
-	font-family: 'GetVoIP Grotesque';
-	font-style: normal;
-	font-weight: 700;
-	src: local('GetVoIP Grotesque'),
-		url('https://fonts.cdnfonts.com/s/21763/GetVoIP Grotesque.woff')
-			format('woff');
-}
-// font-family: 'Inter', sans-serif;
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;700&display=swap');
-// font-family: 'Source Sans Pro', sans-serif;
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
-
-html,
-body {
-	width: 100%;
-	max-width: 100%;
-	margin: 0;
-	padding: 0;
-	background: #fbfbfb;
-	color: #2b2732;
-
-	font-family: 'Inter', sans-serif;
-}
-
-ul {
-	margin: 0;
-	padding: 0;
-	li {
-		list-style: none;
-	}
-}
-a {
-	text-decoration: none;
-	color: inherit;
-}
-
-header {
-	margin: 0;
-	padding: 24px 0;
-	width: 100%;
-	max-width: 100%;
-	box-sizing: border-box;
-
-	border-bottom: 1px solid #2b2732;
-
-	.logo {
-		max-height: 80px;
-		max-width: 120px;
-	}
-}
-
-nav {
-	.menu {
-		&--horizontal {
-			display: flex;
-			flex-direction: row;
-			justify-content: start;
-			align-items: center;
-			gap: 42px;
-		}
-	}
-}
-
 section {
 	position: relative;
 	padding: 92px 0;
@@ -233,114 +168,6 @@ section {
 	}
 }
 
-footer {
-	position: relative;
-	padding: 92px 0;
-	overflow-x: hidden;
-
-	h1 {
-		font-family: 'GetVoIP Grotesque', sans-serif;
-	}
-
-	.mr-4 {
-		margin-right: 16px;
-	}
-	.mt-max {
-		margin-top: 64px;
-	}
-
-	.contacts {
-		gap: 0;
-
-		&--name {
-			margin: 0;
-			color: #7e7b82;
-			font-family: 'GetVoIP Grotesque', sans-serif;
-		}
-		&--map {
-			position: absolute;
-			right: 0;
-			bottom: 0;
-			height: 100%;
-			width: 40%;
-			background: #7e7b82;
-		}
-	}
-
-	.btt {
-		position: absolute;
-		top: 100px;
-		left: 80px;
-	}
-
-	#map {
-		width: 100%;
-		height: 100%;
-		filter: grayscale(60%);
-	}
-}
-
-.text {
-	&-primary {
-		color: #056d7b;
-	}
-	&-white {
-		color: #ffffff;
-		&::after {
-			content: '';
-			background-color: #ffffff !important;
-		}
-	}
-}
-.h-underline {
-	&::after {
-		content: '';
-		width: 80px;
-		height: 4px;
-		background-color: #056d7b;
-		position: absolute;
-		bottom: -16px;
-		left: 0;
-	}
-}
-.ml {
-	&-auto {
-		margin-left: auto;
-	}
-}
-.btn {
-	&--wrapper {
-		width: 100%;
-		margin-top: 32px;
-		display: flex;
-		flex-direction: row;
-		gap: 32px;
-	}
-
-	width: fit-content;
-	box-sizing: border-box;
-	display: flex;
-	flex-direction: row;
-	justify-content: center;
-	align-items: center;
-	padding: 18px 30px;
-	border: 2px solid #2b2732;
-	border-radius: 72px;
-
-	&--primary {
-		color: #ffffff;
-		background: #11a083;
-	}
-	&--clear {
-		border: none;
-	}
-
-	&:hover {
-		background: #2b2732;
-		color: #ffffff;
-	}
-}
-
 .tarif {
 	&--list {
 		margin-top: 48px;
@@ -386,22 +213,6 @@ footer {
 				text-decoration: line-through;
 			}
 		}
-	}
-}
-
-.animated--circle {
-	position: absolute;
-	right: 80px;
-	bottom: 80px;
-	transform-origin: center center;
-	animation: circle 8s linear infinite;
-}
-@keyframes circle {
-	0% {
-		transform: rotate(0deg);
-	}
-	100% {
-		transform: rotate(-360deg);
 	}
 }
 
@@ -578,8 +389,4 @@ footer {
 			backdrop-filter: none;
 		}
 	}
-}
-
-.x-hidden {
-	overflow-x: hidden;
 }

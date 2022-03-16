@@ -1,0 +1,26 @@
+header {
+	margin: 0;
+	padding: 24px 0;
+	width: 100%;
+	max-width: 100%;
+	box-sizing: border-box;
+
+	border-bottom: 1px solid #2b2732;
+
+	.logo {
+		max-height: 80px;
+		max-width: 120px;
+	}
+}
+
+nav {
+	.menu {
+		&--horizontal {
+			display: flex;
+			flex-direction: row;
+			justify-content: start;
+			align-items: center;
+			gap: 42px;
+		}
+	}
+}
