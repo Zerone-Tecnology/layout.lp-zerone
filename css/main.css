@@ -228,6 +228,7 @@ section.portfolio .slider--next:hover img {
 footer {
   position: relative;
   padding: 92px 0;
+  overflow-x: hidden;
 }
 
 footer h1 {
@@ -360,6 +361,8 @@ footer #map {
   border-radius: 12px;
   padding: 32px 30px;
   border: 1px solid #2b2732;
+  overflow: hidden;
+  position: relative;
 }
 
 .tarif--content ul {
@@ -370,6 +373,34 @@ footer #map {
   font-size: 18px;
   line-height: 28px;
   list-style: disc;
+}
+
+.tarif--content .stiker {
+  position: absolute;
+  top: 0;
+  right: -16px;
+  padding: 8px 32px 8px 16px;
+  border-radius: 0 12px 12px 12px;
+  color: #ffffff;
+  background: #11a083;
+  text-transform: uppercase;
+}
+
+.tarif--content .percenteage,
+.tarif--content .price,
+.tarif--content .price--old {
+  margin: 0;
+  font-weight: 200;
+}
+
+.tarif--content .price {
+  font-size: 24px;
+  color: #11a083;
+  font-weight: 700;
+}
+
+.tarif--content .price--old {
+  text-decoration: line-through;
 }
 
 .animated--circle {
@@ -469,6 +500,8 @@ footer #map {
   color: #ffffff;
   border-radius: 8px;
   border: 1px solid #ffffff;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
   -webkit-transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
   transition: all 0.4s cubic-bezier(0.075, 0.82, 0.165, 1);
 }
@@ -558,6 +591,8 @@ footer #map {
 .step--item-clear {
   left: calc(4715px + 150px);
   border: none;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
 }
 
 .step--item-liner {
@@ -566,4 +601,10 @@ footer #map {
   width: 4715px;
   max-width: 4715px;
   top: 260px;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+}
+
+.x-hidden {
+  overflow-x: hidden;
 }

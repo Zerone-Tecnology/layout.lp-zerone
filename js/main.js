@@ -1,3 +1,5 @@
+
+AOS.init();
 // Portfolio start
 const swiper = new Swiper('.swiper', {
     // Optional parameters
