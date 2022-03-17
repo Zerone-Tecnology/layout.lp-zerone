@@ -2,12 +2,14 @@
 	.container {
 		box-sizing: border-box;
 	}
+
 	header {
 		z-index: 10;
 		position: fixed;
 		overflow: hidden;
 		border-bottom: none;
 		background: #fbfbfb;
+		padding-bottom: 0;
 
 		.header {
 			&--top {

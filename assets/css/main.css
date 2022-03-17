@@ -615,6 +615,7 @@ section.portfolio .slider--next:hover img {
     overflow: hidden;
     border-bottom: none;
     background: #fbfbfb;
+    padding-bottom: 0;
   }
   header .header--top {
     width: 100%;
