@@ -397,6 +397,7 @@ section.portfolio .slider--next:hover img {
 
 .tarif--list {
   margin-top: 48px;
+  row-gap: 30px;
 }
 
 .tarif--content {
@@ -718,5 +719,62 @@ section.portfolio .slider--next:hover img {
   }
   section.hot marquee h1 {
     font-size: 32px;
+  }
+  section.expirience .tarif--wrapper {
+    overflow: hidden;
+    overflow-x: scroll;
+    -ms-overflow-style: none;
+    /* IE and Edge */
+    scrollbar-width: none;
+    /* Firefox */
+  }
+  section.expirience .tarif--wrapper ::-webkit-scrollbar {
+    display: none;
+  }
+  section.expirience .tarif--list {
+    max-width: -webkit-fit-content;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: nowrap;
+        flex-wrap: nowrap;
+    padding: 0 32px 0 0;
+  }
+  section.expirience .tarif--item {
+    width: 318px;
+  }
+  footer .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+    row-gap: 32px;
+  }
+  footer .container .contacts--map {
+    position: relative;
+    display: block;
+    height: 320px;
+    width: 100%;
+    max-width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  footer .btt {
+    display: none;
+  }
+  footer .animated--circle {
+    bottom: 32px;
+    right: 32px;
+    left: auto;
+    max-width: 140px;
   }
 }

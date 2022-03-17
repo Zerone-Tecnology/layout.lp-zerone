@@ -103,5 +103,55 @@
 				}
 			}
 		}
+
+		&.expirience {
+			.tarif {
+				&--wrapper {
+					overflow: hidden;
+					overflow-x: scroll;
+					-ms-overflow-style: none; /* IE and Edge */
+					scrollbar-width: none; /* Firefox */
+					::-webkit-scrollbar {
+						display: none;
+					}
+				}
+				&--list {
+					max-width: fit-content;
+					width: fit-content;
+					flex-direction: row;
+					flex-wrap: nowrap;
+					padding: 0 32px 0 0;
+				}
+				&--item {
+					width: 318px;
+				}
+			}
+		}
+	}
+
+	footer {
+		.container {
+			display: flex;
+			flex-direction: column-reverse;
+			row-gap: 32px;
+
+			.contacts--map {
+				position: relative;
+				display: block;
+				height: 320px;
+				width: 100%;
+				max-width: 100%;
+				box-sizing: border-box;
+			}
+		}
+		.btt {
+			display: none;
+		}
+		.animated--circle {
+			bottom: 32px;
+			right: 32px;
+			left: auto;
+			max-width: 140px;
+		}
 	}
 }

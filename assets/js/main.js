@@ -51,6 +51,7 @@ let StepObject = {
         });
     },
     getStepItems: () => { return StepObject.stepItems },
+
     drawStepItems: () => {
         $(".step--item").each(index => {
             if (!$($(".step--item")[index]).hasClass('step--item-liner')) {
@@ -85,20 +86,22 @@ $(document).ready(() => {
     StepObject.setStepItems()
     StepObject.drawStepItems()
 
+    $('a.menu--item').on('click', function () {
+        Header.toogleer()
+    })
     $('.controller--btn').on('click', function () {
+        Header.toogleer()
+    });
+})
+
+let Header = {
+    toogleer: function () {
         $("header").toggleClass("open");
 
         if ($("header").hasClass('open')) {
-            disableScroll()
+            Header.disableScroll()
         } else {
-            enableScroll()
+            Header.enableScroll()
         }
-    });
-})
-function disableScroll() {
-    window.onscroll = function () { return 0 };
-}
-
-function enableScroll() {
-    window.onscroll = function () { };
+    },
 }
