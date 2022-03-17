@@ -107,6 +107,8 @@
 		}
 
 		&.expirience {
+			padding-bottom: 0;
+			border-bottom: none !important ;
 			.tarif {
 				&--wrapper {
 					overflow: hidden;
@@ -194,6 +196,38 @@
 			right: 32px;
 			left: auto;
 			max-width: 140px;
+		}
+	}
+}
+
+@media screen and (max-width: 1200px) {
+	section {
+		&.expirience {
+			.tarif {
+				&--item {
+					.btn {
+						width: 100%;
+						max-width: 100%;
+						box-sizing: border-box;
+						&--wrapper {
+							flex-direction: column-reverse !important;
+						}
+					}
+
+					.price--content {
+						width: 100%;
+						display: flex;
+						flex-direction: row !important;
+						margin-left: auto;
+						text-align: end;
+						justify-content: end;
+						.percenteage {
+							margin-top: 2px;
+							padding-right: 15px;
+						}
+					}
+				}
+			}
 		}
 	}
 }

@@ -721,6 +721,10 @@ section.portfolio .slider--next:hover img {
   section.hot marquee h1 {
     font-size: 32px;
   }
+  section.expirience {
+    padding-bottom: 0;
+    border-bottom: none !important;
+  }
   section.expirience .tarif--wrapper {
     overflow: hidden;
     overflow-x: scroll;
@@ -812,5 +816,39 @@ section.portfolio .slider--next:hover img {
     right: 32px;
     left: auto;
     max-width: 140px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  section.expirience .tarif--item .btn {
+    width: 100%;
+    max-width: 100%;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  section.expirience .tarif--item .btn--wrapper {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: reverse !important;
+        -ms-flex-direction: column-reverse !important;
+            flex-direction: column-reverse !important;
+  }
+  section.expirience .tarif--item .price--content {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+    margin-left: auto;
+    text-align: end;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: end;
+  }
+  section.expirience .tarif--item .price--content .percenteage {
+    margin-top: 2px;
+    padding-right: 15px;
   }
 }
