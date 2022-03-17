@@ -37,17 +37,19 @@ let StepObject = {
     },
     stepItems: [],
     setStepItems: () => {
+        if ($(window).width() < 768) {
+            StepObject.mainValues.cardWidth = 318
+        }
         let margin = StepObject.mainValues.margin
         $(".step--item").each(index => {
-            if ($(".step--item").hasClass('step--item-liner')) {
-
-            }
             if (index == 0) {
                 StepObject.stepItems[index] = { leftOffset: margin }
             } else {
                 if (index >= 11) { false; }
                 StepObject.stepItems[index] = { leftOffset: margin + index * (StepObject.mainValues.cardWidth + 35) }
             }
+
+            console.log('StepObject.stepItems[index]', StepObject.stepItems[index].leftOffset)
         });
     },
     getStepItems: () => { return StepObject.stepItems },
@@ -63,22 +65,28 @@ let StepObject = {
 
     },
     nextStepItem: () => {
+        if ($(window).width() < 768) {
+            StepObject.mainValues.cardWidth = 318
+        }
         let nextIndex = $(".step--item").filter(".step--item-active").next().index();
         if (nextIndex == 12) { return 0 }
 
         $(".step--item").filter(".step--item-active").removeClass("step--item-active");
         $($('.step--item')[nextIndex]).addClass("step--item-active");
 
-        $('.step--list').animate({ scrollLeft: (380 + 35) * nextIndex }, 600);
+        $('.step--list').animate({ scrollLeft: (StepObject.mainValues.cardWidth + 35) * nextIndex }, 600);
     },
     prevStepItem: () => {
+        if ($(window).width() < 768) {
+            StepObject.mainValues.cardWidth = 318
+        }
         let prevIndex = $(".step--item").filter(".step--item-active").prev().index();
         if (prevIndex == -1) { return 0 }
 
         $(".step--item").filter(".step--item-active").removeClass("step--item-active");
         $($('.step--item')[prevIndex]).addClass("step--item-active");
 
-        $('.step--list').animate({ scrollLeft: (380 + 35) * prevIndex }, 600);
+        $('.step--list').animate({ scrollLeft: (StepObject.mainValues.cardWidth + 35) * prevIndex }, 600);
     }
 }
 

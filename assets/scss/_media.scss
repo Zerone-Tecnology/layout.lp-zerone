@@ -130,6 +130,12 @@
 			}
 		}
 
+		&.banner {
+			.step--item {
+				max-width: 318px;
+			}
+		}
+
 		&.portfolio {
 			.container {
 				display: flex;

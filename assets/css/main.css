@@ -750,6 +750,9 @@ section.portfolio .slider--next:hover img {
   section.expirience .tarif--item {
     width: 318px;
   }
+  section.banner .step--item {
+    max-width: 318px;
+  }
   section.portfolio .container {
     display: -webkit-box;
     display: -ms-flexbox;
