@@ -161,6 +161,12 @@ header .logo {
   max-width: 120px;
 }
 
+header .social--icons,
+header .menu--controller {
+  display: none !important;
+  cursor: pointer;
+}
+
 nav .menu--horizontal {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -272,7 +278,7 @@ section .services p {
 }
 
 section.banner {
-  background-image: url("https://zerone-tecnology.github.io/layout.lp-zerone/img/section__proccess.jpg");
+  background-image: url("https://zerone-tecnology.github.io/layout.lp-zerone/assets/img/section__proccess.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -537,63 +543,51 @@ section.portfolio .slider--next:hover img {
 }
 
 .step--item-2 {
-  left: calc(150px + 380px + 35px);
   top: 54px;
 }
 
 .step--item-3 {
-  left: calc(565px + 380px + 35px);
   top: 108px;
 }
 
 .step--item-4 {
-  left: calc(980px + 380px + 35px);
   top: 0;
 }
 
 .step--item-5 {
-  left: calc(1395px + 380px + 35px);
   top: 54px;
 }
 
 .step--item-6 {
-  left: calc(1810px + 380px + 35px);
   top: 108px;
 }
 
 .step--item-7 {
-  left: calc(2225px + 380px + 35px);
   top: 0px;
 }
 
 .step--item-8 {
-  left: calc(2640px + 380px + 35px);
   top: 54px;
 }
 
 .step--item-9 {
-  left: calc(3055px + 380px + 35px);
   top: 108px;
 }
 
 .step--item-10 {
-  left: calc(3470px + 380px + 35px);
   top: 0px;
 }
 
 .step--item-11 {
-  left: calc(3885px + 380px + 35px);
   top: 54px;
 }
 
 .step--item-12 {
-  left: calc(4300px + 380px + 35px);
   top: 108px;
   margin-right: 150px !important;
 }
 
 .step--item-clear {
-  left: calc(4715px + 150px);
   border: none;
   -webkit-backdrop-filter: none;
           backdrop-filter: none;
@@ -607,4 +601,122 @@ section.portfolio .slider--next:hover img {
   top: 260px;
   -webkit-backdrop-filter: none;
           backdrop-filter: none;
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  header {
+    z-index: 10;
+    position: fixed;
+    overflow: hidden;
+    border-bottom: none;
+    background: #fbfbfb;
+  }
+  header .header--top {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    padding-bottom: 15px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    border-bottom: 1px solid #000000;
+  }
+  header .header--top .controller--close {
+    display: none;
+  }
+  header .menu--wrapper {
+    display: none !important;
+  }
+  header .menu--controller {
+    margin-right: 15px;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+  }
+  header.open {
+    height: 100vh;
+  }
+  header.open .controller--burger {
+    display: none;
+  }
+  header.open .controller--close {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header.open .social--icons {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    gap: 32px;
+  }
+  header.open .menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+    -webkit-box-align: start !important;
+        -ms-flex-align: start !important;
+            align-items: flex-start !important;
+    margin-top: 32px;
+    margin-bottom: 32px;
+  }
+  header.open .menu--wrapper {
+    width: 100%;
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: start !important;
+        -ms-flex-pack: start !important;
+            justify-content: flex-start !important;
+    -webkit-box-align: start !important;
+        -ms-flex-align: start !important;
+            align-items: flex-start !important;
+  }
+  section {
+    overflow: hidden;
+  }
+  section.hero h1 {
+    font-size: 48px;
+  }
+  section.hero .animated--circle {
+    position: relative;
+    left: 0;
+    top: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin: 0 64px 0 auto;
+    max-width: 144px;
+  }
+  section.about .btn {
+    width: 100%;
+    max-width: 100%;
+  }
+  section.about .btn--wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
+  }
+  section.hot marquee h1 {
+    font-size: 32px;
+  }
 }

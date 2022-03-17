@@ -28,26 +28,77 @@ DG.then(function () {
 });
 // Map end
 
-function prevStepItem() {
-    let prevIndex = $(".step--item").filter(".step--item-active").prev().index();
-    if (prevIndex == -1) { return 0 }
 
-    $(".step--item").filter(".step--item-active").removeClass("step--item-active");
-    $($('.step--item')[prevIndex]).addClass("step--item-active");
+// section Steps-Этапы 
+let StepObject = {
+    mainValues: {
+        margin: ($("section.banner").width() - $(".container").width()) / 2,
+        cardWidth: 380,
+    },
+    stepItems: [],
+    setStepItems: () => {
+        let margin = StepObject.mainValues.margin
+        $(".step--item").each(index => {
+            if ($(".step--item").hasClass('step--item-liner')) {
 
-    $('.step--list').animate({ scrollLeft: prevIndex * 380 }, 600);
+            }
+            if (index == 0) {
+                StepObject.stepItems[index] = { leftOffset: margin }
+            } else {
+                if (index >= 11) { false; }
+                StepObject.stepItems[index] = { leftOffset: margin + index * (StepObject.mainValues.cardWidth + 35) }
+            }
+        });
+    },
+    getStepItems: () => { return StepObject.stepItems },
+    drawStepItems: () => {
+        $(".step--item").each(index => {
+            if (!$($(".step--item")[index]).hasClass('step--item-liner')) {
+                if (index >= 12) { false; }
+                $($(".step--item")[index]).css('left', StepObject.stepItems[index].leftOffset + 'px')
+            }
+        });
+        $($(".step--item-liner")).css('left', StepObject.mainValues.margin + 'px')
+
+    },
+    nextStepItem: () => {
+        let nextIndex = $(".step--item").filter(".step--item-active").next().index();
+        if (nextIndex == 12) { return 0 }
+
+        $(".step--item").filter(".step--item-active").removeClass("step--item-active");
+        $($('.step--item')[nextIndex]).addClass("step--item-active");
+
+        $('.step--list').animate({ scrollLeft: (380 + 35) * nextIndex }, 600);
+    },
+    prevStepItem: () => {
+        let prevIndex = $(".step--item").filter(".step--item-active").prev().index();
+        if (prevIndex == -1) { return 0 }
+
+        $(".step--item").filter(".step--item-active").removeClass("step--item-active");
+        $($('.step--item')[prevIndex]).addClass("step--item-active");
+
+        $('.step--list').animate({ scrollLeft: (380 + 35) * prevIndex }, 600);
+    }
 }
-function nextStepItem() {
-    let nextIndex = $(".step--item").filter(".step--item-active").next().index();
-    if (nextIndex == 12) { return 0 }
 
-    $(".step--item").filter(".step--item-active").removeClass("step--item-active");
-    $($('.step--item')[nextIndex]).addClass("step--item-active");
+$(document).ready(() => {
+    StepObject.setStepItems()
+    StepObject.drawStepItems()
 
-    $('.step--list').animate({ scrollLeft: nextIndex * 380 + 35 * nextIndex }, 600);
-}
+    $('.controller--btn').on('click', function () {
+        $("header").toggleClass("open");
 
-
-$(document).on('load', () => {
-    initSwiper()
+        if ($("header").hasClass('open')) {
+            disableScroll()
+        } else {
+            enableScroll()
+        }
+    });
 })
+function disableScroll() {
+    window.onscroll = function () { return 0 };
+}
+
+function enableScroll() {
+    window.onscroll = function () { };
+}
