@@ -694,7 +694,10 @@ section.portfolio .slider--next:hover img {
     overflow: hidden;
   }
   section.hero h1 {
-    font-size: 48px;
+    font-size: 36px;
+  }
+  section.hero li {
+    font-size: 16px !important;
   }
   section.hero .animated--circle {
     position: relative;
@@ -703,8 +706,8 @@ section.portfolio .slider--next:hover img {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    margin: 0 64px 0 auto;
-    max-width: 144px;
+    margin: 0 62px 0 auto;
+    max-width: 140px;
   }
   section.about .btn {
     width: 100%;
