@@ -750,6 +750,38 @@ section.portfolio .slider--next:hover img {
   section.expirience .tarif--item {
     width: 318px;
   }
+  section.portfolio .container {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  section.portfolio .btn--wrapper {
+    display: none !important;
+  }
+  section.portfolio .portfolio--content {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: reverse !important;
+        -ms-flex-direction: column-reverse !important;
+            flex-direction: column-reverse !important;
+  }
+  section.portfolio .portfolio--content-numbers {
+    margin: 0 auto;
+  }
+  section.portfolio .portfolio--image-list {
+    position: relative;
+    width: 100%;
+    max-width: 100%;
+    height: 320px;
+    border-radius: 12px;
+  }
+  section.portfolio .portfolio--image-list .swiper .swiper-slide img {
+    -o-object-position: 50% 50%;
+       object-position: 50% 50%;
+  }
   footer .container {
     display: -webkit-box;
     display: -ms-flexbox;
