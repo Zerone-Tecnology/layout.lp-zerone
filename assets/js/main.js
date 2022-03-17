@@ -48,8 +48,6 @@ let StepObject = {
                 if (index >= 11) { false; }
                 StepObject.stepItems[index] = { leftOffset: margin + index * (StepObject.mainValues.cardWidth + 35) }
             }
-
-            console.log('StepObject.stepItems[index]', StepObject.stepItems[index].leftOffset)
         });
     },
     getStepItems: () => { return StepObject.stepItems },
