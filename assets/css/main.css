@@ -708,6 +708,7 @@ section.portfolio .slider--next:hover img {
     display: flex;
     margin: 0 32px 0 auto;
     max-width: 140px;
+    z-index: 20;
   }
   section.about .btn {
     width: 100%;
