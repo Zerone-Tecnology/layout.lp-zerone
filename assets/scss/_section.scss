@@ -17,7 +17,7 @@ section {
 		font-family: 'GetVoIP Grotesque', sans-serif;
 	}
 
-	.hero {
+	&.hero {
 		background-image: url('../img/bg_header.jpg');
 		background-repeat: no-repeat;
 		&--info {
@@ -32,6 +32,10 @@ section {
 				}
 			}
 		}
+	}
+	&.prdlozhniya{
+		background-image: url('../img/bg_service.jpg');
+		background-repeat: no-repeat;
 	}
 
 	.services {
