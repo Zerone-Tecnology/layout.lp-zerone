@@ -18,6 +18,8 @@ section {
 	}
 
 	.hero {
+		background-image: url('../img/bg_header.jpg');
+		background-repeat: no-repeat;
 		&--info {
 			.info--list {
 				margin: 0;
