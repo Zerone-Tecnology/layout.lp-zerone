@@ -83,6 +83,16 @@ a {
 	}
 }
 
+.btn-more_project{
+	width: 24px;
+	height: 24px;
+	display: block;
+	position: absolute;
+	top: 5%;
+	left: 5%;
+	z-index: 99;
+}
+
 .animated--circle {
 	position: absolute;
 	right: 80px;
@@ -101,4 +111,8 @@ a {
 
 .x-hidden {
 	overflow-x: hidden;
+}
+
+.hide{
+	display: none;
 }
